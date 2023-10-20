@@ -14,7 +14,12 @@ Able to test parts in the lab, and identify parts using A.I. recognition
 
 <br>
 <br>
+## Budget
+<br>
+$100
 
+   * $50 = party upon completion of Project F.e.
+   * $50 = party upon completion of Project R.a.
 ## Iteration
 <br>
 <br>
