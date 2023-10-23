@@ -23,6 +23,59 @@ $100
 ## Iteration
 <br>
 <br>
+The Pseudocode for the Test Box
+
+```mermaid
+flowchart TD
+    A(((Human Input))) -->B(Check for plugged in devices)
+    B --> C{Device Outputs}
+    E[Servos]
+    D[Toggle 0-90]
+    F[LCD]
+    G[Draws text]
+    H[Ultrasonic sensor]
+    J[LED]
+    K[Blinks]
+    L[Photocell]
+    N[RGB LED] 
+    O[OLED]
+    P[Photoresistor]
+    subgraph Devices
+    direction TB
+    subgraph  
+    
+    subgraph Servos
+    direction RL
+    E-->D
+    end
+    L
+    P
+    H
+    end
+    subgraph Screens
+    direction TB
+    F---O
+    F-->G
+    O-->G
+    end
+    H-->Screens
+    subgraph LEDs
+    direction TB
+    subgraph  
+    direction RL
+    J---N
+    end
+    J-->K
+    N-->K
+    end
+
+end
+C-->Devices
+L-->LEDs
+P-->LEDs
+```
+
+<br>
 The requirements of the Test Box.
 
 ![for Test Box essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[Test%20Box].jpg)
@@ -49,7 +102,7 @@ The requirements of the AI.
 <br>
 
 ### Description
-
+A box that quickly tests certain types of parts
 
 <br>
 <br>
