@@ -39,7 +39,7 @@ flowchart TD
     L[Photocell]
     N[RGB LED] 
     O[OLED]
-    P[Photoresistor]
+    P[Photointerrupter]
     subgraph Devices
     direction TB
     subgraph  
