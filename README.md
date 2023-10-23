@@ -14,16 +14,25 @@ Able to test parts in the lab, and identify parts using A.I. recognition
 
 <br>
 <br>
+
 ## Budget
+
 <br>
 $100
 
    * $50 = party upon completion of Project F.e.
    * $50 = party upon completion of Project R.a.
+<br>
+<br>
+<br>
+
 ## Iteration
+
 <br>
 <br>
-The Pseudocode for the Test Box
+
+   * The Pseudocode for the Test Box
+<br>
 
 ```mermaid
 flowchart TD
@@ -76,22 +85,30 @@ P-->LEDs
 ```
 
 <br>
-The requirements of the Test Box.
+<br>
+
+   * The requirements of the Test Box.
+<br>
 
 ![for Test Box essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[Test%20Box].jpg)
 
 <br>
-The views from different sides of the box. 
+<br>
+
+   * The views from different sides of the box. 
+<br>
 
 ![for AI essential and non...](Images/Views%20and%20parts%20of%20the%20Project.jpg)
 
 <br>
-The requirements of the AI.
+<br>
+
+   * The requirements of the AI.
+<br>
 
 ![for AI essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[AI].jpg)
 
-
-
+<br>
 <br>
 <br>
 
