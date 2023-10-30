@@ -26,6 +26,40 @@ $100
 <br>
 <br>
 
+
+## Schedule
+<br>
+<br>
+
+Parts Tester: Achievement   |   Date  |
+------------- |-------- |
+Research | Week 1 |
+Begin Code And Wiring | Week 2 - 6 |
+Begin CAD And Manufacturing | Week 2 - 6 |
+Begin Assembly and Testing | Week 7 - 9 |
+Final Testing | Week 10 |
+Small Iterations | Week 11 |
+Documentation | Week 1-11 |
+
+<br>
+<br>
+
+AI Recognition: Achievement   |   Date  |
+------------- |-------- |
+Research | Week 12 |
+Begin Code And Wiring | Week 13 - 17 |
+Begin CAD And Manufacturing | Week 13 - 17 |
+Begin Assembly and Testing | Week 18 - 20 |
+Final Testing | Week 21 |
+Small Iterations | Week 22 |
+Documentation | Week 1-22 |
+
+
+
+<br>
+<br>
+<br>
+
 ## Iteration
 
 <br>
