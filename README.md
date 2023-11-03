@@ -160,6 +160,13 @@ A box that quickly tests certain types of parts
 
 ### Problems and Solutions
 
+* **Problem:** We didn't remember most of the code, and syntax which made it harder to code the assignment
+   
+   * **Solution:** Googled different things that would be used in the code so that it could be integrated to work with one another.
+ 
+* **Problem:** The LCD Screen consists of multiple addresses, so knowing which address goes to which LCD Screen, and how the code would integrate all of them created an obstacle.
+   
+   * **Solution:** Used the most popular addresses and added them to a list that the code can use to reference if an LCD Screen in the lab has it. This would allow a wider array of LCDs to be tested.
 
 <br>
 <br>
