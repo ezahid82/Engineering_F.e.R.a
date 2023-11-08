@@ -168,6 +168,11 @@ A box that quickly tests certain types of parts
    
    * **Solution:** Used the most popular addresses and added them to a list that the code can use to reference if an LCD Screen in the lab has it. This would allow a wider array of LCDs to be tested.
 
+* **Problem:** The OLED Code broke the LCD screen's code by adding corrupted text on the display.
+   
+   * **Solution:** 
+ 
+
 <br>
 <br>
 
