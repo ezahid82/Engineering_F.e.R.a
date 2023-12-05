@@ -24,6 +24,7 @@ from rgb import RGB#RGB LED
 print("sdfgh")#are we sure that this is actually running??
 #Section for devices that might as well always be loaded because them existing won't crash it and it will work as soon as plugged in
 #Pins also won't change anyway
+#We used pins 1,2,7,8,9,10,11,13,14,15,26
 #OLED reset pin
 reset_pin = digitalio.DigitalInOut(board.GP1)
 #LED initialization
@@ -91,7 +92,7 @@ while True:
             except:
                 try:#has it been change to LCD address?
                     oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=addr1)
-                except:#same as line 86*subject to change
+                except:#same as line 86*subject to change(LCD check)
                     pass
             try:#try to set up OLED output
                 oled.fill(0)
