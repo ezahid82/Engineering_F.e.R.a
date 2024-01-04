@@ -176,6 +176,14 @@ A box that quickly tests certain types of parts
    
    * **Solution:** This ended up being an address conflict error when the OLED code found the existence of an address on the LCD. Because it did not understand how to do those things, it created the glitchy text. Just checking typical addresses first solved this problem... for now.
  
+* **Problem:** A rail was soldered on the circuitboard at an angle.
+   
+   * **Solution:** Give it a little more space on the cut for the prototype.
+     
+* **Problem:** A combination of senioritis and Tardies delayed the project.
+  
+   * **Solution:** Work harder when we are there.
+ 
 
 <br>
 <br>
