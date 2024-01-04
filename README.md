@@ -119,7 +119,7 @@ P-->LEDs
 ```
 
 <br>
-*Circuit Diagram of Test Box
+  *Circuit Diagram of Test Box
 
 ![Test Box Circuit Diagram](Images/FECircuit.png)
 
@@ -174,7 +174,7 @@ A box that quickly tests certain types of parts
 
 * **Problem:** The OLED Code broke the LCD screen's code by adding corrupted text on the display.
    
-   * **Solution:** 
+   * **Solution:** This ended up being an address conflict error when the OLED code found the existence of an address on the LCD. Because it did not understand how to do those things, it created the glitchy text. Just checking typical addresses first solved this problem... for now.
  
 
 <br>
