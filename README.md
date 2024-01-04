@@ -119,6 +119,10 @@ P-->LEDs
 ```
 
 <br>
+*Circuit Diagram of Test Box
+
+![Test Box Circuit Diagram](Images/FECircuit.png)
+
 <br>
 
    * The requirements of the Test Box.
