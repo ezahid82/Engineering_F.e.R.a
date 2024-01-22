@@ -119,6 +119,10 @@ P-->LEDs
 ```
 
 <br>
+  *Circuit Diagram of Test Box
+
+![Test Box Circuit Diagram](Images/FECircuit.png)
+
 <br>
 
    * The requirements of the Test Box.
@@ -170,7 +174,23 @@ A box that quickly tests certain types of parts
 
 * **Problem:** The OLED Code broke the LCD screen's code by adding corrupted text on the display.
    
-   * **Solution:** 
+   * **Solution:** This ended up being an address conflict error when the OLED code found the existence of an address on the LCD. Because it did not understand how to do those things, it created the glitchy text. Just checking typical addresses first solved this problem... for now.
+ 
+* **Problem:** A rail was soldered on the circuit board at an angle.
+   
+   * **Solution:** Give it a little more space on the cut for the prototype.
+     
+* **Problem:** A combination of senioritis and Tardies delayed the project.
+  
+   * **Solution:** Work harder when we are there.
+ 
+* **Problem:** Struggle to decide whether to keep the Photo-interrupter because of the difficulty in preventing short circuits and integrating it into the Box.
+
+   * **Solution:** Remove the part to stay on schedule, and decide whether to add it later.
+
+* **Problem:** Having the **servo,** **RGB LED,** **LED,** and **Photo-resister** separate, and having printed brackets to each, along with their small size is inconvenient and inefficient
+
+   * **Solution:** Have those **four parts** on a small circuit board, and then attach the circuit board to the **Box**.
  
 
 <br>
