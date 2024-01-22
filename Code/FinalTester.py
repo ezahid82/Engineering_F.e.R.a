@@ -40,7 +40,7 @@ pwm_servo = pwmio.PWMOut(board.GP0, duty_cycle=2 ** 15, frequency=50)
 servo1 = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
 #Photocell
 photocell = analogio.AnalogIn(board.GP26)
-cellLed = digitalio.DigitalInOut(board.GP11)
+cellLed = digitalio.DigitalInOut(board.GP2)
 cellLed.direction = digitalio.Direction.OUTPUT
 #Ultrasonic Sensor
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.GP17, echo_pin=board.GP16)
@@ -49,7 +49,7 @@ interrupter = digitalio.DigitalInOut(board.GP10)
 interrupter.direction = digitalio.Direction.INPUT
 interrupter.pull = digitalio.Pull.UP
 #photointerrupter intended LED
-interLed = digitalio.DigitalInOut(board.GP2)
+interLed = digitalio.DigitalInOut(board.GP11)
 interLed.direction = digitalio.Direction.OUTPUT
 #Tracks Time.monotonic's last runtime for each device
 ledTime=time.monotonic()#all lighting not integrated in the box here
@@ -172,3 +172,5 @@ while True:
             interLed.value=True
         else:
             interLed.value=False
+
+        
