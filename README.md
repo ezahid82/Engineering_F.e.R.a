@@ -147,6 +147,20 @@ P-->LEDs
 ![for AI essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[AI].jpg)
 
 <br>
+
+  * The Psuedocode for the AI.
+<br>
+
+```mermaid
+flowchart TD
+    A[Device Starts] -->|Button?| B[/Takes Camera input/]
+    B --> C[(Compare to reference images)]
+    C --> D{Predict part identity}
+    D --> E[Take part prediction]
+    E --> F[run part prediction through bin table]
+    F --> G[/display table with highlighted box/]
+```
+    
 <br>
 <br>
 
