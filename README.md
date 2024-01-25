@@ -214,8 +214,10 @@ A box that quickly tests certain types of parts
 This is the proof of concept code (to make sure that all of the devics could function simultaneously), and the Final code, which has the logic built into it.
 <details>
 <summary>Proof of concept code</summary>
-  
+
+```python
 ```circuitpython
+
   #type:ignore
   import board
   import busio
@@ -284,8 +286,10 @@ This is the proof of concept code (to make sure that all of the devics could fun
 
 <details>
 <summary>Final code</summary>
-
+  
+```python
 ```circuitpython
+
 #Need to add RGB LCD OLED
 #type:ignore
 #Requires the imports of The following files* to Libraries
