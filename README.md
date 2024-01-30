@@ -474,6 +474,17 @@ while True:
 
 ### Images progress
 
+<br>
+
+* Assembly of the **Test Box**
+
+<img src="Images/F.e.R.a. - Assembly (Top view).jpg" alt="the Test Box from top" width="550" height="650">
+
+<img src="Images/F.e.R.a. - Assembly (Topographic).jpg" alt="the Test Box from an angle" width="550" height="550">
+
+<br>
+
+
 
 <br>
 <br>
