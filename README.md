@@ -205,6 +205,10 @@ A box that quickly tests certain types of parts
 * **Problem:** Having the **servo,** **RGB LED,** **LED,** and **Photo-resister** separate, and having printed brackets to each, along with their small size is inconvenient and inefficient
 
    * **Solution:** Have those **four parts** on a small circuit board, and then attach the circuit board to the **Box**.
+     
+* **Problem** Soldering wires to floating headers is PAINFUL.
+
+  * **Solution** Just get it over with and leave it to others (if you want to modify it, this should probably be changed). 
  
 
 <br>
