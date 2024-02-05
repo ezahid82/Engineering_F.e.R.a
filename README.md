@@ -65,6 +65,9 @@ Documentation | Week 1-22 |
 <br>
 <br>
 
+<details>
+<summary>Test Box</summary>
+  
    * The Pseudocode for the Test Box
 <br>
 
@@ -119,6 +122,8 @@ P-->LEDs
 ```
 
 <br>
+
+
   *Circuit Diagram of Test Box
 
 ![Test Box Circuit Diagram](Images/FECircuit.png)
@@ -141,12 +146,23 @@ P-->LEDs
 <br>
 <br>
 
+</details>
+<br>
+<br>
+
    * The requirements of the AI.
 <br>
 
 ![for AI essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[AI].jpg)
 
 <br>
+
+
+
+<br>
+<br>
+
+
 
   * The Psuedocode for the AI.
 <br>
@@ -161,6 +177,12 @@ flowchart TD
     F --> G[/display table with highlighted box/]
 ```
     
+<br>
+<br>
+<br>
+
+</details>
+
 <br>
 <br>
 
@@ -220,6 +242,9 @@ A box that quickly tests certain types of parts
 
 ### Coding
 This is the proof of concept code (to make sure that all of the devics could function simultaneously), and the Final code, which has the logic built into it.
+
+<br>
+
 <details>
 <summary>Proof of concept code</summary>
 
