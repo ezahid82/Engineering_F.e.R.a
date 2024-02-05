@@ -82,46 +82,38 @@ while True:
             try:
                 i2c_bus_0 = busio.I2C(board.GP15, board.GP14)
                 i2c=True
-                print("hey")
             except RuntimeError:#luckily this can ONLY runtime error(2 types of errors do not work well for nice excepts)
                 i2c=False
         if i2c==True and screen==False:#Do we have an I2C but no screen
-            if oaddr==0:
-                for i in addrList:
-                    try:#check most common LCD address
-                        interface = I2CPCF8574Interface(i2c_bus_0, i)
-                        lcd = LCD(interface, num_rows=2, num_cols=16)
-                        screen=True
-                        print("lcd")
-                        lcd.print("START")
-                        laddr=i
-                        addrList.remove(i)
-                    except:
-                        pass
+            for i in addrList:
+                try:#check most common LCD address
+                    interface = I2CPCF8574Interface(i2c_bus_0, i)
+                    lcd = LCD(interface, num_rows=2, num_cols=16)
+                    screen=True
+                    lcd.print("START")
+                    laddr=i
+                    addrList.remove(i)
+                except:
+                    pass
         if i2c==True and altscreen==False:#do we have an OLED right now?
-            if laddr==0:#has the LCD claimed an address
-                for x in addrList:
-                    try:#check most common OLED address
-                        oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=x)
-                        oaddr = x
-                        addrList.remove(x)
-                    except:
-                        pass
+            for x in addrList:
+                try:#check most common OLED address
+                    oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=x)
+                    oaddr = x
+                    addrList.remove(x)
+                except:
+                    pass
             try:#try to set up OLED output
                 oled.fill(0)
                 oled.show()
                 altscreen=True
             except:
                 pass
-    if time.monotonic()>=altTime+.25 and altscreen==True:#runs every 1/4 seconds
+    if time.monotonic()>=altTime+.25:#runs every 1/4 seconds
         altTime=time.monotonic()
         try:
-            if inv==False:#toggles white/black
-                oled.invert(True)
-                inv=True
-            else:
-                oled.invert(False)
-                inv=False
+            oled.invert(inv)
+            inv = not inv
         except:#if OLED is gone there is none
             altscreen=False
             addrList.append(oaddr)
@@ -163,7 +155,7 @@ while True:
                     addrList.append(laddr)
                     laddr=0
             else:#else use serial monitor
-                print(sonar.distance)
+                print(result)
         except RuntimeError:#no return ping (either not plugged in or bounced at a bad angle)
             if (screen==True):
                 try:
@@ -184,5 +176,4 @@ while True:
             interLed.value=True
         else:
             interLed.value=False
-
-        
+            #extra
