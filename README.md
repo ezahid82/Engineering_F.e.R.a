@@ -208,7 +208,11 @@ A box that quickly tests certain types of parts
      
 * **Problem** Soldering wires to floating headers is PAINFUL.
 
-  * **Solution** Just get it over with and leave it to others (if you want to modify it, this should probably be changed). 
+  * **Solution** Just get it over with and leave it to others (if you want to modify it, this should probably be changed).
+    
+* **Problem** OLED would not connect
+
+  * **Solution** I accidentally forgot to put an **else** statement for when the other i2c device is in, such that it only ran one at a time, despite the capacity for more.
  
 
 <br>
