@@ -517,6 +517,116 @@ while True:
 ### Images progress
 
 <br>
+<br>
+
+<details>
+<summary>CLICK ME</summary>
+
+<br>
+<br>
+
+<details>
+<summary>CAD Walls</summary>
+
+Onshape-designed **walls**.
+
+<br>
+<br>
+
+* The **Back** side of the Test Box.
+
+<br>
+
+<img src="Images/Back. - Side..PNG" alt="the Back wall of the box" width="550" height="450">
+
+<br>
+<br>
+
+* The **Bottom Base** of the Test Box.
+
+<br>
+
+<img src="Images/Bottom Base.PNG" alt="the Bottom Base of the box" width="600" height="450">
+
+<br>
+<br>
+
+* The **Front** Side of the Test Box.
+
+<img src="Images/Front. - Side.PNG" alt="the Front wall of the box" width="550" height="200">
+
+<br>
+<br>
+
+* The **Inner** Side of the Test Box.
+
+<img src="Images/Inner. - Side..PNG" alt="the Inner-Side wall of the box" width="550" height="270">
+
+<br>
+<br>
+
+* The **Left** Side of the Test Box.
+
+<img src="Images/Left Side.PNG" alt="the Left wall of the box" width="550" height="310">
+
+<br>
+<br>
+
+* The **Right** Wall of the Test Box.
+
+<img src="Images/Right Side.PNG" alt="the Right wall of the box" width="550" height="305">
+
+<br>
+<br>
+
+* The **Top Cliff-Wall** of the Test Box.
+
+<img src="Images/Top Cliff Wall.PNG" alt="the Top-CLiff-wall of the box" width="550" height="270">
+
+<br>
+<br>
+
+* The **Upper Base** of the Test Box.
+
+<img src="Images/Upper Base.PNG" alt="the Upper Base of the box" width="550" height="500">
+
+</details>
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+<details>
+<summary>Dupont Connector Brackets</summary>
+
+CAD-designed brackets for the Dupont connectors 
+
+<br>
+<br>
+
+* Dupont Connector for the **LCD**.
+
+<br>
+
+<img src="Images/Dupont Connector (LCD).PNG" alt="the Upper Base of the box" width="550" height="500">
+
+<br>
+<br>
+
+* Dupont Connector for the **OLED**.
+
+<img src="Images/Dupont Connector (OLED).PNG" alt="the Upper Base of the box" width="550" height="500">
+
+
+</details>
+
+<br>
+<br>
+<br>
 
 * Assembly of the **Test Box**
 
@@ -525,9 +635,11 @@ while True:
 <img src="Images/F.e.R.a. - Assembly (Topographic).jpg" alt="the Test Box from an angle" width="550" height="550">
 
 <br>
+<br>
 
+</details>
 
-
+<br>
 <br>
 <br>
 
