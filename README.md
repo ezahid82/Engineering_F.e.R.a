@@ -8,6 +8,7 @@ Able to test parts in the lab, and identify parts using A.I. recognition
 * [Project F.e.](#parts-tester)
    * [Problems and Solutions](#problems-and-solutions)
    * [Description](#description)
+   * [Code](#coding)
    * [Images](#images-progress)
    * [Links](#related-links)
 
