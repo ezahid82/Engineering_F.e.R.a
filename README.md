@@ -317,6 +317,10 @@ This is the proof of concept code (to make sure that all of the devics could fun
 
 </details>
 
+<br>
+<br>
+<br>
+
 <details>
 <summary>Final code</summary>
   
@@ -385,15 +389,24 @@ altscreen=False#OLED reference
 servoTime=time.monotonic()
 servoState=0#servo angle
 screen=False#is there currently an LCD to display on
-screenTime=time.monotonic() #LCD "is this still here" test time
 ultraDelay=time.monotonic()  #This is for the Ultrasonic sensor
+result=0#records last result of ultrasonic sensor
 #Photointerrupter does not need a time
-addr1=0x27#add more addresses if you ever need to add a new i2c type
-addr2=0x3D#one of the 2 common LCD/OLED addresses
+#This is a list of EVERY SINGLE i2c address. Going to add a for stetment to check for addresses
+addrList=[0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x0c,0x0d,0x0e,0x0f,
+0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x19,0x1a,0x1b,0x1c,0x1d,0x1e,0x1f,
+0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,0x2a,0x2b,0x2c,0x2d,0x2e,0x2f,
+0x30,0x31,0x33,0x36,0x38,0x39,0x3a,0x3b,0x3c,0x3d,0x3e,0x3f,
+0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4a,0x4b,0x4c,0x4d,0x4e,0x4f,
+0x50,0x51,0x52,0x53,0x54,0x55,0x56,0x57,0x58,0x59,0x5a,0x5b,0x5c,0x5d,0x5e,0x5f,
+0x60,0x61,0x62,0x63,0x64,0x65,0x66,0x67,0x68,0x69,0x6a,0x6b,0x6c,0x6d,0x6e,0x6f,
+0x70,0x71,0x72,0x73,0x74,0x75,0x76,0x77,0x78,0x79,0x7a,0x7b,0x7c,0x7d,0x7e,0x7f]
+laddr=0
+oaddr=0
 i2c=False#has an I2C ever been plugged during this run
 inv=False#this is the toggle check for OLED (screen should change black/white)
 while True:
-    if i2c==False or screen==False or altscreen:#area to check for any I2C device as well as either screen type(it breaks if it is attempted to be loaded when not plugged in)
+    if i2c==False or screen==False or altscreen==False:#area to check for any I2C device as well as either screen type(it breaks if it is attempted to be loaded when not plugged in)
         if i2c==False:#do we have I2C set yet?
             try:
                 i2c_bus_0 = busio.I2C(board.GP15, board.GP14)
@@ -401,23 +414,23 @@ while True:
             except RuntimeError:#luckily this can ONLY runtime error(2 types of errors do not work well for nice excepts)
                 i2c=False
         if i2c==True and screen==False:#Do we have an I2C but no screen
-            try:#check most common LCD address
-                interface = I2CPCF8574Interface(i2c_bus_0, addr1)
-                lcd = LCD(interface, num_rows=2, num_cols=16)
-                screen=True
-            except:
-                try:#have we changed the address on this LCD?
-                    interface = I2CPCF8574Interface(i2c_bus_0,addr2)
+            for i in addrList:
+                try:#check most common LCD address
+                    interface = I2CPCF8574Interface(i2c_bus_0, i)
+                    lcd = LCD(interface, num_rows=2, num_cols=16)
                     screen=True
-                except:# may not matter because it also could just glitch it and combine OLED with LCD (may need future checkups)
+                    lcd.print("START")
+                    laddr=i
+                    addrList.remove(i)
+                except:
                     pass
         if i2c==True and altscreen==False:#do we have an OLED right now?
-            try:#check most common OLED address
-                oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=addr2)
-            except:
-                try:#has it been change to LCD address?
-                    oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=addr1)
-                except:#same as line 86*subject to change(LCD check)
+            for x in addrList:
+                try:#check most common OLED address
+                    oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=x)
+                    oaddr = x
+                    addrList.remove(x)
+                except:
                     pass
             try:#try to set up OLED output
                 oled.fill(0)
@@ -425,25 +438,15 @@ while True:
                 altscreen=True
             except:
                 pass
-    if time.monotonic()>=altTime+.25 and altscreen==True:#runs every 1/4 seconds
+    if time.monotonic()>=altTime+.25:#runs every 1/4 seconds
         altTime=time.monotonic()
         try:
-            if inv==False:#toggles white/black
-                oled.invert(True)
-                inv=True
-            else:
-                oled.invert(False)
-                inv=False
+            oled.invert(inv)
+            inv = not inv
         except:#if OLED is gone there is none
             altscreen=False
-    if (time.monotonic()>=screenTime+.2):#triggers evry 1/5 seconds
-        screenTime=time.monotonic()
-        try:#can it print anything at all?
-            lcd.print(" ")
-            lcd.clear()
-            screen=True
-        except:
-            screen=False#no screen for rest of loop instance
+            addrList.append(oaddr)
+            oaddr=0
     if (time.monotonic()>=ledTime+1):#lights every 1 second
         ledTime=time.monotonic()
         if (ledState==True):#blinks LED
@@ -468,17 +471,20 @@ while True:
         elif servoState==90:
             servoState=0
         servo1.angle=servoState
-    if (time.monotonic()>=ultraDelay+.2):#ultrasonic sensro pings every 1/5 seconds
+    if (time.monotonic()>=ultraDelay+.5):#ultrasonic sensro pings every 1/5 seconds
         ultraDelay=time.monotonic()
         try:#ultrasonic will break if it does not get a return ping, most ultrasonic sensor codes in this language have a try
+            result=str(sonar.distance)
             if (screen==True):#do we have a screen?
                 try:
                     lcd.clear()
-                    lcd.print(str(sonar.distance))
+                    lcd.print(result)
                 except:
                     screen=False
+                    addrList.append(laddr)
+                    laddr=0
             else:#else use serial monitor
-                print(sonar.distance)
+                print(result)
         except RuntimeError:#no return ping (either not plugged in or bounced at a bad angle)
             if (screen==True):
                 try:
@@ -486,6 +492,8 @@ while True:
                     lcd.print("Testing")
                 except:
                     screen=False
+                    addrList.append(laddr)
+                    laddr=0
             else:#I got complaints about it printing to the serial monitor and wanted to be petty instead of writing something for a very impractical scenario because serial monitor is for bug fixing anyway
                 pass
         #will run every instance ~20 times a second, I never counted, but it loops pretty quickly
@@ -497,7 +505,7 @@ while True:
             interLed.value=True
         else:
             interLed.value=False
-
+            #extra
         
 ```
 
