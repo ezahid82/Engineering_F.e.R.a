@@ -21,6 +21,8 @@ import analogio#photocell/numerical returns
 import adafruit_hcsr04#ultrasonic sensor
 from adafruit_motor import servo#servos
 from rgb import RGB#RGB LED
+import random
+from adafruit_display_text import label
 print("sdfgh")#are we sure that this is actually running??
 #Section for devices that might as well always be loaded because them existing won't crash it and it will work as soon as plugged in
 #Pins also won't change anyway
@@ -44,13 +46,6 @@ cellLed = digitalio.DigitalInOut(board.GP2)
 cellLed.direction = digitalio.Direction.OUTPUT
 #Ultrasonic Sensor
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.GP17, echo_pin=board.GP16)
-#Photointerrupter
-interrupter = digitalio.DigitalInOut(board.GP10)
-interrupter.direction = digitalio.Direction.INPUT
-interrupter.pull = digitalio.Pull.UP
-#photointerrupter intended LED
-interLed = digitalio.DigitalInOut(board.GP11)
-interLed.direction = digitalio.Direction.OUTPUT
 #Tracks Time.monotonic's last runtime for each device
 ledTime=time.monotonic()#all lighting not integrated in the box here
 ledState=False#blinks LED
@@ -73,9 +68,11 @@ addrList=[0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x0c,0x0d,0x0e,0x0f,
 0x60,0x61,0x62,0x63,0x64,0x65,0x66,0x67,0x68,0x69,0x6a,0x6b,0x6c,0x6d,0x6e,0x6f,
 0x70,0x71,0x72,0x73,0x74,0x75,0x76,0x77,0x78,0x79,0x7a,0x7b,0x7c,0x7d,0x7e,0x7f]
 laddr=0
+n=0
 oaddr=0
+x=0#x position of random pixel
+y=0#y position of random pixel
 i2c=False#has an I2C ever been plugged during this run
-inv=False#this is the toggle check for OLED (screen should change black/white)
 while True:
     if i2c==False or screen==False or altscreen==False:#area to check for any I2C device as well as either screen type(it breaks if it is attempted to be loaded when not plugged in)
         if i2c==False:#do we have I2C set yet?
@@ -91,6 +88,7 @@ while True:
                     lcd = LCD(interface, num_rows=2, num_cols=16)
                     screen=True
                     lcd.print("START")
+                    print("LCD")
                     laddr=i
                     addrList.remove(i)
                 except:
@@ -101,31 +99,34 @@ while True:
                     oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=x)
                     oaddr = x
                     addrList.remove(x)
+                    print("up")
+                    altscreen=True
+                    break
                 except:
                     pass
-            try:#try to set up OLED output
+            if altscreen==True:#try to set up OLED output
                 oled.fill(0)
                 oled.show()
-                altscreen=True
-            except:
-                pass
     if time.monotonic()>=altTime+.25:#runs every 1/4 seconds
         altTime=time.monotonic()
-        try:
-            oled.invert(inv)
-            inv = not inv
-        except:#if OLED is gone there is none
-            altscreen=False
-            addrList.append(oaddr)
-            oaddr=0
+        if altscreen == True:
+            try:
+                x=random.randrange(0,128)
+                y=random.randrange(0,64)
+                oled.pixel(x,y,1)
+                n+=1
+                if n>=50:
+                    n=0
+                    oled.fill(0)
+                oled.show()
+            except:#if OLED is gone there is none
+                altscreen=False
+                addrList.append(oaddr)
+                oaddr=0
     if (time.monotonic()>=ledTime+1):#lights every 1 second
         ledTime=time.monotonic()
-        if (ledState==True):#blinks LED
-            ledState=False
-            led.value=False
-        elif (ledState==False):
-            ledState=True
-            led.value=True
+        ledState=not ledState
+        led.value=ledState
         if rgbState == 0:#modifies RGB LED coloration
             rgbState+=1
             myRGBled.red()
@@ -167,13 +168,9 @@ while True:
                     laddr=0
             else:#I got complaints about it printing to the serial monitor and wanted to be petty instead of writing something for a very impractical scenario because serial monitor is for bug fixing anyway
                 pass
-        #will run every instance ~20 times a second, I never counted, but it loops pretty quickly
-        if (photocell.value>500):#if it is "dark"(may vary between photocells)-warrants checkback ***maybe switch
-            cellLed.value=True
-        else:
-            cellLed.value=False#if normal or unplugged LED lights up
-        if interrupter.value==False:#if light is blocked
-            interLed.value=True
-        else:
-            interLed.value=False
-            #extra
+    #will run every instance ~20 times a second, I never counted, but it loops pretty quickly
+#    if (photocell.value>500):#if it is "dark"(may vary between photocells)-warrants checkback ***maybe switch
+#        cellLed.value=True
+#    else:
+#        cellLed.value=False#if normal or unplugged LED lights up
+    cellLed.value=True
