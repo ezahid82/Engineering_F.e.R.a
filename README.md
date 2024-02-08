@@ -27,6 +27,10 @@ $100
 <br>
 <br>
 
+---
+
+<br>
+<br>
 
 ## Schedule
 <br>
@@ -61,6 +65,12 @@ Documentation | Week 1-22 |
 <br>
 <br>
 
+---
+
+<br>
+<br>
+
+
 ## Iteration
 
 <br>
@@ -70,6 +80,7 @@ Documentation | Week 1-22 |
 <summary>Test Box</summary>
   
    * The Pseudocode for the Test Box
+   * 
 <br>
 
 ```mermaid
@@ -148,24 +159,24 @@ P-->LEDs
 <br>
 
 </details>
-<br>
-<br>
-
-   * The requirements of the AI.
-<br>
-
-![for AI essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[AI].jpg)
 
 <br>
-
-
-
 <br>
 <br>
 
 
+* The requirements of the AI
 
-  * The Psuedocode for the AI.
+![For AI essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[AI].jpg)
+
+<br>
+
+
+ 
+
+
+* The Psuedocode for the AI.
+
 <br>
 
 ```mermaid
@@ -177,12 +188,18 @@ flowchart TD
     E --> F[run part prediction through bin table]
     F --> G[/display table with highlighted box/]
 ```
-    
+
 <br>
 <br>
 <br>
 
 </details>
+
+<br>
+<br>
+<br>
+
+---
 
 <br>
 <br>
@@ -195,6 +212,12 @@ flowchart TD
 
 ### Description
 A box that quickly tests certain types of parts
+
+<br>
+<br>
+<br>
+
+---
 
 <br>
 <br>
@@ -237,6 +260,12 @@ A box that quickly tests certain types of parts
 
   * **Solution** I accidentally forgot to put an **else** statement for when the other i2c device is in, such that it only ran one at a time, despite the capacity for more.
  
+
+<br>
+<br>
+<br>
+
+---
 
 <br>
 <br>
@@ -511,6 +540,13 @@ while True:
 ```
 
 </details>
+
+<br>
+<br>
+<br>
+
+---
+
 <br>
 <br>
 
@@ -594,10 +630,6 @@ Onshape-designed **walls**.
 
 <br>
 <br>
-
----
-
-<br>
 <br>
 
 <details>
@@ -628,11 +660,20 @@ CAD-designed brackets for the Dupont connectors
 <br>
 <br>
 
+<details>
+<summary>Final Assembly</summary>
+
 * Assembly of the **Test Box**
+
+<br>
 
 <img src="Images/F.e.R.a. - Assembly (Top view).jpg" alt="the Test Box from top" width="550" height="650">
 
 <img src="Images/F.e.R.a. - Assembly (Topographic).jpg" alt="the Test Box from an angle" width="550" height="550">
+
+  
+</details>
+
 
 <br>
 <br>
@@ -640,6 +681,11 @@ CAD-designed brackets for the Dupont connectors
 </details>
 
 <br>
+<br>
+<br>
+
+---
+
 <br>
 <br>
 
