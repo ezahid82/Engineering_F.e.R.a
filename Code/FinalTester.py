@@ -169,8 +169,8 @@ while True:
             else:#I got complaints about it printing to the serial monitor and wanted to be petty instead of writing something for a very impractical scenario because serial monitor is for bug fixing anyway
                 pass
     #will run every instance ~20 times a second, I never counted, but it loops pretty quickly
-#    if (photocell.value>500):#if it is "dark"(may vary between photocells)-warrants checkback ***maybe switch
-#        cellLed.value=True
-#    else:
-#        cellLed.value=False#if normal or unplugged LED lights up
-    cellLed.value=True
+    if (photocell.value>1000 or photocell.value<400):#if it is "dark"(may vary between photocells)-warrants checkback ***maybe switch
+        cellLed.value=True
+    else:
+        cellLed.value=False#if normal or unplugged LED lights up
+        print(photocell.value)
