@@ -228,13 +228,13 @@ A box that quickly tests certain types of parts
    
    * **Solution:** Googled different things that would be used in the code so that it could be integrated to work with one another.
  
-* **Problem:** The LCD Screen consists of multiple addresses, so knowing which address goes to which LCD Screen, and how the code would integrate all of them created an obstacle.
+* **Problem:** The **LCD ** consists of multiple addresses, so knowing which address the current **LCD** is using, and how the code would integrate all of them created an obstacle.
    
    * **Solution:** Used the most popular addresses and added them to a list that the code can use to reference if an LCD Screen in the lab has it. This would allow a wider array of LCDs to be tested.
 
-* **Problem:** The OLED Code broke the LCD screen's code by adding corrupted text on the display.
+* **Problem:** The **OLED** Code broke the **LCD** screen's code by adding corrupted text on the display.
    
-   * **Solution:** This ended up being an address conflict error when the OLED code found the existence of an address on the LCD. Because it did not understand how to do those things, it created the glitchy text. Just checking typical addresses first solved this problem... for now.
+   * **Solution:** This ended up being an address conflict error when the **OLED** code found the existence of an address on the **LCD**. Because it did not understand how to do those things, it created the glitchy text. Just checking typical addresses first solved this problem... for now.
  
 * **Problem:** A rail was soldered on the circuit board at an angle.
    
@@ -244,11 +244,11 @@ A box that quickly tests certain types of parts
   
    * **Solution:** Work harder when we are there.
  
-* **Problem:** Struggle to decide whether to keep the Photo-interrupter because of the difficulty in preventing short circuits and integrating it into the Box.
+* **Problem:** Struggle to decide whether to keep the **Photo-interrupter** because of the difficulty in preventing short circuits and integrating it into the Box.
 
-   * **Solution:** Remove the part to stay on schedule, and decide whether to add it later.
+   * **Solution:** We removed the part in order to stay more on schedule, and will fix it when we have time or leave it for others to add.
 
-* **Problem:** Having the **servo,** **RGB LED,** **LED,** and **Photo-resister** separate, and having printed brackets to each, along with their small size is inconvenient and inefficient
+* **Problem:** Having the **servo,** **RGB LED,** **LED,** and **Photo-resister** separate, and having to print brackets for each. Additionally, they were inconvenient due to how small they were
 
    * **Solution:** Have those **four parts** on a small circuit board, and then attach the circuit board to the **Box**.
      
@@ -256,7 +256,7 @@ A box that quickly tests certain types of parts
 
   * **Solution** Just get it over with and leave it to others (if you want to modify it, this should probably be changed).
     
-* **Problem** OLED would not connect
+* **Problem** **OLED would not connect**
 
   * **Solution** I accidentally forgot to put an **else** statement for when the other i2c device is in, such that it only ran one at a time, despite the capacity for more.
  
@@ -279,7 +279,6 @@ This is the proof of concept code (to make sure that all of the devics could fun
 <summary>Proof of concept code</summary>
 
 ```python
-```circuitpython
 
   #type:ignore
   import board
@@ -355,7 +354,6 @@ This is the proof of concept code (to make sure that all of the devics could fun
 <summary>Final code</summary>
   
 ```python
-```circuitpython
 
 #Need to add RGB LCD OLED
 #type:ignore
