@@ -275,7 +275,7 @@ A box that quickly tests certain types of parts
 <br>
 
 ### Coding
-This is the proof of concept code (to make sure that all of the devics could function simultaneously), and the Final code, which has the logic built into it.
+This is the proof of concept code (to make sure that all of the devices could function simultaneously), and the Final code, which has the logic built into it.
 
 <br>
 
