@@ -51,6 +51,8 @@ ledTime=time.monotonic()#all lighting not integrated in the box here
 ledState=False#blinks LED
 rgbState=0 #switches between 0(red),1(green), and 2(blue)
 altTime=time.monotonic()
+button = digitalio.DigitalInOut(board.GP22)
+button.pull = digitalio.Pull.DOWN
 altscreen=False#OLED reference
 servoTime=time.monotonic()
 servoState=0#servo angle
@@ -72,36 +74,45 @@ n=0
 oaddr=0
 x=0#x position of random pixel
 y=0#y position of random pixel
-i2c=False#has an I2C ever been plugged during this run
+butState=False
+butDebounce=False
+butTime=time.monotonic()
+i2cA=False#has an I2C ever been plugged during this run
+i2cB=False
 while True:
-    if i2c==False or screen==False or altscreen==False:#area to check for any I2C device as well as either screen type(it breaks if it is attempted to be loaded when not plugged in)
-        if i2c==False:#do we have I2C set yet?
+    if i2cA==False or i2cB==False or screen==False or altscreen==False:#area to check for any I2C device as well as either screen type(it breaks if it is attempted to be loaded when not plugged in)
+        if i2cA==False:#do we have I2C set yet?
             try:
-                i2c_bus_0 = busio.I2C(board.GP15, board.GP14)
-                i2c=True
+                i2c_bus_1 = busio.I2C(board.GP15, board.GP14)
+                i2cA=True
             except RuntimeError:#luckily this can ONLY runtime error(2 types of errors do not work well for nice excepts)
-                i2c=False
-        if i2c==True and screen==False:#Do we have an I2C but no screen
+                i2cA=False
+        if i2cB==False:#do we have I2C set yet?
+            try:
+                i2c_bus_0 = busio.I2C(board.GP21, board.GP20)
+                i2cB=True
+            except RuntimeError:#luckily this can ONLY runtime error(2 types of errors do not work well for nice excepts)
+                i2cB=False
+        if i2cB==True and screen==False and button.value==True:#Do we have an I2C but no screen
             for i in addrList:
                 try:#check most common LCD address
                     interface = I2CPCF8574Interface(i2c_bus_0, i)
                     lcd = LCD(interface, num_rows=2, num_cols=16)
                     screen=True
                     lcd.print("START")
-                    print("LCD")
                     laddr=i
+                    print("hi",laddr)
                     addrList.remove(i)
                 except:
                     pass
-        if i2c==True and altscreen==False:#do we have an OLED right now?
+        if i2cA==True and altscreen==False:#do we have an OLED right now?
             for x in addrList:
                 try:#check most common OLED address
-                    oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_0, addr=x)
+                    oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c_bus_1, addr=x)
                     oaddr = x
                     addrList.remove(x)
-                    print("up")
+                    print("up", oaddr)
                     altscreen=True
-                    break
                 except:
                     pass
             if altscreen==True:#try to set up OLED output
@@ -153,6 +164,7 @@ while True:
                     lcd.print(result)
                 except:
                     screen=False
+                    butState=False
                     addrList.append(laddr)
                     laddr=0
             else:#else use serial monitor
@@ -164,6 +176,7 @@ while True:
                     lcd.print("Testing")
                 except:
                     screen=False
+                    butState=False
                     addrList.append(laddr)
                     laddr=0
             else:#I got complaints about it printing to the serial monitor and wanted to be petty instead of writing something for a very impractical scenario because serial monitor is for bug fixing anyway
@@ -173,4 +186,3 @@ while True:
         cellLed.value=True
     else:
         cellLed.value=False#if normal or unplugged LED lights up
-        print(photocell.value)
