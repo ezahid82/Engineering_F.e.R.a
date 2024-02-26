@@ -263,7 +263,10 @@ A box that quickly tests certain types of parts
 * **Problem:** Many of the wires on the circuit board keep coming off the pins and disconnect certain parts or all of the box.
 
   * **Solution:** Resolder many of the wires so that its flush with the board and reassemble the box.
- 
+
+* **Problem:** The **OLED** and **LCD Screen** I2c addresses keep interfereing with each other. 
+
+  * **Solution:** We added a button to separate the **LCD** and **OLED** so they function independently.
 
 <br>
 <br>
