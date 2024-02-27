@@ -78,9 +78,12 @@ Documentation | Week 1-22 |
 
 <details>
 <summary>Test Box</summary>
-  
+
+<br>
+
    * The Pseudocode for the Test Box
-   * 
+
+<br>
 <br>
 
 ```mermaid
@@ -224,6 +227,11 @@ A box that quickly tests certain types of parts
 
 ### Problems and Solutions
 
+<br>
+
+<details>
+<summary>Click me</summary>
+
 * **Problem:** We didn't remember most of the code, and syntax which made it harder to code the assignment
    
    * **Solution:** Googled different things that would be used in the code so that it could be integrated to work with one another.
@@ -258,15 +266,21 @@ A box that quickly tests certain types of parts
     
 * **Problem:** **OLED would not connect**
 
-  * **Solution:** I accidentally forgot to put an **else** statement for when the other i2c device is in, such that it only ran one at a time, despite the capacity for more.
+  * **Solution:** It was accidentally forgotten to put an **else** statement for when the other **i2c** device is in, such that it only ran one at a time, despite the capacity for more.
 
 * **Problem:** Many of the wires on the circuit board keep coming off the pins and disconnect certain parts or all of the box.
 
-  * **Solution:** Resolder many of the wires so that its flush with the board and reassemble the box.
+  * **Solution:** Resolder many of the wires so that it's flush with the board and reassemble the box.
 
 * **Problem:** The **OLED** and **LCD Screen** I2c addresses keep interfereing with each other. 
 
-  * **Solution:** We added a button to separate the **LCD** and **OLED** so they function independently.
+  * **Solution:** Added a button to separate the **LCD** and **OLED** so they function independently.
+
+* **Problem:** After adding the button, the **OLED** and **LCD** still interfere but the frequency of occurance has reduced.
+
+  * **Solution:** Added a second **I2C Bus** to separate the **LCD** and **OLED** so that they stop cross-communicating and glitching each other's code.
+
+</details>
 
 <br>
 <br>
@@ -699,5 +713,15 @@ CAD-designed brackets for the Dupont connectors
 
 <br>
 <br>
+<br>
+
+---
+
+<br>
+<br>
+
+# [BACK TO TOP!](#table-of-contents)
+
+
 
 
