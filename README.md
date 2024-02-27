@@ -3,8 +3,8 @@
 <br>
 <br>
 
-# **[ Project F.e.md ]** is the **Parts Tester**.
+## **[ Project F.e.md ]** is the **Parts Tester**.
 
 <br>
 
-# **[ Project R.a.md ]** is the **AI Recognition tool**.
+## **[ Project R.a.md ]** is the **AI Recognition tool**.
