@@ -285,6 +285,8 @@ A box that quickly tests certain types of parts
 * **Problem:** After adding the button, the **OLED** and **LCD** still interfere but the frequency of occurance has reduced.
 
   * **Solution:** Added a second **I2C Bus** to separate the **LCD** and **OLED** so that they stop cross-communicating and glitching each other's code.
+ 
+* **Solution:** ** The Project has been *completed and given* to the teacher. The project will move on to its *second* phase and *research* will begin at earliest available time**
 
 </details>
 
