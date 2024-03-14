@@ -5,3 +5,4 @@
 The Purpose of Project R.a. is to build an image recognition device using machine learning that identifies various parts around the lab
 
 <br>
+ contention between 'sketch' and 'watercolor'
