@@ -19,3 +19,5 @@ The Purpose of Project R.a. is to build an image recognition device using machin
    * None of these appeared to be too helpful, but in the testing the auto mode helped slightly
 * We were also unsure how large we wanted to make the box, our basic outline felt massive, but we needed a 4:3 aspect ratio and enough room for the camera to focus
    * solution pending
+* Framebuffer would not close without human input
+   * I tried to use kill, I tried to create a button that hit enter, but it turned out that there was a set of modifiers on the Framebuffer command that kill it after some time, however the first time I tried it I did not have the "once" modifier in it(-1), so it ended up repeating, but the timer worked. I finally tried both of them together and it actually worked.
