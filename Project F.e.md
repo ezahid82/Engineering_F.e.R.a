@@ -57,22 +57,6 @@ Documentation | Week 1-11 |
 <br>
 <br>
 
-AI Recognition: Achievement   |   Date  |
-------------- |-------- |
-Research | Week 12 |
-Begin Code And Wiring | Week 13 - 17 |
-Begin CAD And Manufacturing | Week 13 - 17 |
-Begin Assembly and Testing | Week 18 - 20 |
-Final Testing | Week 21 |
-Small Iterations | Week 22 |
-Documentation | Week 1-22 |
-
-
-
-<br>
-<br>
-<br>
-
 ---
 
 <br>
@@ -83,10 +67,6 @@ Documentation | Week 1-22 |
 
 <br>
 <br>
-
-<details>
-<summary>Test Box</summary>
-
 <br>
 
    * The Pseudocode for the Test Box
@@ -164,47 +144,8 @@ P-->LEDs
    * The views from different sides of the box. 
 <br>
 
-![for AI essential and non...](Images/Views%20and%20parts%20of%20the%20Project.jpg)
+![Test Box designs](Images/Views%20and%20parts%20of%20the%20Project.jpg)
 
-<br>
-<br>
-
-</details>
-
-<br>
-<br>
-<br>
-
-
-* The requirements of the AI
-
-![For AI essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[AI].jpg)
-
-<br>
-
-
- 
-
-
-* The Psuedocode for the AI.
-
-<br>
-
-```mermaid
-flowchart TD
-    A[Device Starts] -->|Button?| B[/Takes Camera input/]
-    B --> C[(Compare to reference images)]
-    C --> D{Predict part identity}
-    D --> E[Take part prediction]
-    E --> F[run part prediction through bin table]
-    F --> G[/display table with highlighted box/]
-```
-
-<br>
-<br>
-<br>
-
-</details>
 
 <br>
 <br>
@@ -239,6 +180,7 @@ A box that quickly tests certain types of parts
 
 <details>
 <summary>Click me</summary>
+
 
 * **Problem:** We didn't remember most of the code, and syntax which made it harder to code the assignment
    
@@ -300,6 +242,8 @@ A box that quickly tests certain types of parts
 
 <br>
 <br>
+<br>
+
 
 ### Coding
 This is the proof of concept code (to make sure that all of the devices could function simultaneously), and the Final code, which has the logic built into it.
