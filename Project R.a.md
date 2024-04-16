@@ -5,7 +5,75 @@
 The Purpose of Project R.a. is to build an image recognition device using machine learning that identifies various parts around the lab
 
 <br>
+<br>
 
+---
+
+<br>
+<br>
+
+## Table of Contents
+
+<br>
+<br>
+
+
+AI Recognition: Achievement   |   Date  |
+------------- |-------- |
+Research | Week 12 |
+Begin Code And Wiring | Week 13 - 17 |
+Begin CAD And Manufacturing | Week 13 - 17 |
+Begin Assembly and Testing | Week 18 - 20 |
+Final Testing | Week 21 |
+Small Iterations | Week 22 |
+Documentation | Week 1-22 |
+
+
+
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+* The requirements of the AI
+
+![For AI essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[AI].jpg)
+
+<br>
+<br>
+
+
+* The Psuedocode for the AI.
+
+<br>
+
+```mermaid
+flowchart TD
+    A[Device Starts] -->|Button?| B[/Takes Camera input/]
+    B --> C[(Compare to reference images)]
+    C --> D{Predict part identity}
+    D --> E[Take part prediction]
+    E --> F[run part prediction through bin table]
+    F --> G[/display table with highlighted box/]
+```
+
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
  
 ### Problems and solution/project ideas
 
