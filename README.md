@@ -8,6 +8,11 @@
 #### The goal of this project is to create a box that tests various parts around the lab.
 <br>
 
+<img src="Images/IMG_6854.jpg" alt="Final test box product" width="550" height="450">
+please upload gif here when uploaded
+
+<br>
+
 ## **[ Project R.a. ](https://github.com/ezahid82/Engineering_F.e.R.a/blob/main/Project%20R.a.md)** is the **AI Recognition tool**.
 
 #### The goal of this project is to create an image recognition dataset that allows for the identification of parts around the lab in order to assist students in finding where they belong.
