@@ -80,15 +80,15 @@ flowchart TD
 <br>
 <br>
 
-* **Problem:** With almost no experience in machine learning we try and learn how to build an "image recognition device" in 3 months
+* **Problem:** With almost no experience in machine learning we are trying to learn how to build an "image recognition device" in 3 months
   
-   * **Solution:** Will be under a tight schedule
+   * **Solution:** We will be under a tight schedule
 
-* **Problem:** It is possible to find a model online, but will need to make our own dataset
+* **Problem:** It is possible to find a model online, but we will need to make our own dataset
   
    * **Solution:** Make a **folder** with lots of **pictures** (.png or .jpg) that are named after the part, before turning them into CSV files
 
-* **Problem:** Wanted to know if a camera filter might help the model to recognize parts more effectively
+* **Problem:** We wanted to know if a camera filter might help the model to recognize parts more effectively
 
    * **Solution:** Tested all the possible filters and decided to pick between *Negative, sketch, and watercolor*, but discovered that **sketch** is the same as **watercolor**.
 
@@ -96,7 +96,7 @@ flowchart TD
 
    * **Solution:** None of these appeared to be too helpful, except for **auto mode**.
 
-* **Problem:** Unsure of how large to make the **enclosure**, the basic outline felt massive, and need a 3:4 aspect ratio and enough room for the camera to focus.
+* **Problem:** We were unsure of how large to make the **enclosure**, the basic outline felt massive, and need a 3:4 aspect ratio and enough room for the camera to focus.
 
    * **Solution:** Design models out of **cardboard**, and *3D Print* most **effective** design for further testing and finalization.
 
@@ -106,5 +106,5 @@ flowchart TD
 
 * **Problem:** Cannot find a compatible model that works with the device.
   
-   * **Solution:** 
+   * **Solution:** Due to relative project constraints with the materials, It was decided to create a dataset instead for someone to utilize later.
  
