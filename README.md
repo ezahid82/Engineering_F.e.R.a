@@ -6,11 +6,23 @@
 ## **[ Project F.e. ](https://github.com/ezahid82/Engineering_F.e.R.a/blob/main/Project%20F.e.md)** is the **Parts Tester**.
 
 #### The goal of this project is to create a box that tests various parts around the lab.
+
+<br>
 <br>
 
-<img src="Images/IMG_6854.jpg" alt="Final test box product" width="550" height="450">
-please upload gif here when uploaded
+* working final assembly of the Parts Tester (F.e.)
 
+<img src="Images/project FE gif.gif" alt="Final test box product" width="450" height="550">
+
+
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
 <br>
 
 ## **[ Project R.a. ](https://github.com/ezahid82/Engineering_F.e.R.a/blob/main/Project%20R.a.md)** is the **AI Recognition tool**.
