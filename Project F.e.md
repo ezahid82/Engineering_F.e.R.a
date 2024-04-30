@@ -639,6 +639,10 @@ CAD-designed brackets for the Dupont connectors
 * Assembly of the **Test Box**
 
 <br>
+<br>
+<br>
+
+* **laser cut** walls of the **enclosure.** 
 
 <img src="Images/F.e.R.a. - Assembly (Top view).jpg" alt="the Test Box from top" width="550" height="650">
 
