@@ -666,6 +666,13 @@ CAD-designed brackets for the Dupont connectors
 <br>
 <br>
 
+### How to Use
+
+<br>
+<br>
+
+Plug into wall socket with adapter. Put parts to be tested into their labeled place. If you have an ultrasonic, find an LCD and plug it in. If you plugged in an LCD hit the button on the side. Turn off when finished.
+
 ### Related Links
 
 <br>
