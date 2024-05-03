@@ -46,6 +46,14 @@ Documentation | Week 1-22 |
 <br>
 <br>
 
+Wiring
+
+<br>
+
+We have a Raspberry pi with a camera module equipped and a piTFT touchscreen covering all of the GPIO pins
+
+<br>
+<br>
 
 * The Psuedocode for the AI.
 
@@ -64,6 +72,18 @@ flowchart TD
 <br>
 <br>
 
+Parts used:
+
+4 4-40 m-f standoffs
+1 Raspberry Pi
+1 Pi camera
+1 2.2 resistive touchscreen
+2 l-brackets
+2 3-sided brackets
+25 4-40 screws
+25 4-40 nuts
+
+**Space for walls/printed parts**
 
 
 <br>
