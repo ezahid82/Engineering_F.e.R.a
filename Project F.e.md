@@ -72,7 +72,6 @@ Documentation | Week 1-11 |
    * The Pseudocode for the Test Box
 
 <br>
-<br>
 
 ```mermaid
 flowchart TD
@@ -125,15 +124,21 @@ P-->LEDs
 ```
 
 <br>
+<br>
+<br>
 
 
-  *Circuit Diagram of Test Box
+  *   Circuit Diagram of Test Box
+
+<br>
 
 ![Test Box Circuit Diagram](Images/FECircuit.png)
 
 <br>
+<br>
 
    * The requirements of the Test Box.
+
 <br>
 
 ![for Test Box essential and non...](Images/Essential%20and%20Nonessential%20for%20Capstone%20[Test%20Box].jpg)
@@ -141,7 +146,8 @@ P-->LEDs
 <br>
 <br>
 
-   * The views from different sides of the box. 
+   * The views from different sides of the box.
+
 <br>
 
 ![Test Box designs](Images/Views%20and%20parts%20of%20the%20Project.jpg)
@@ -153,6 +159,7 @@ P-->LEDs
 
 ---
 
+<br>
 <br>
 <br>
 
@@ -173,9 +180,11 @@ A box that quickly tests certain types of parts
 
 <br>
 <br>
+<br>
 
 ### Problems and Solutions
 
+<br>
 <br>
 
 <details>
@@ -248,6 +257,7 @@ A box that quickly tests certain types of parts
 ### Coding
 This is the proof of concept code (to make sure that all of the devices could function simultaneously), and the Final code, which has the logic built into it.
 
+<br>
 <br>
 
 <details>
