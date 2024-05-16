@@ -19,6 +19,7 @@ The Purpose of Project R.a. is to build an image recognition device using machin
 * [Project R.a.](#ai-recognition)
    * [Problems and Solutions](#problems-and-solution)
    * [Images](#images)
+   * [Links](#related-links)
 
 ---
 
@@ -114,14 +115,6 @@ flowchart TD
 
 <br>
 <br>
-
-
-
-**Space for walls/printed parts**
-
-
-<br>
-<br>
 <br>
 
 ---
@@ -188,6 +181,36 @@ Use AI to allow students to identify **locations** and **parts** in the lab.
  
 <br>
 <br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
+
+## Images
+
+* Completed Project Images
+
+<img src="Images/R.a. Final Assembly 1.jpg" alt="AI Box final build 1" width="450" height="450">
+
+<img src="Images/R.a. Final Assembly 2.jpg" alt="AI Box final build 1" width="450" height="450">
+
+<img src="Images/R.a. Final Assembly 3.jpg" alt="AI Box final build 1" width="450" height="450">
+
+<img src="Images/R.a. Part Image.jpg" alt="AI Box final build 1" width="450" height="450">
+
+
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
 
 ## Summary
 
@@ -196,4 +219,35 @@ Project R.a. was not finished. We ran out of time to find a compatible model ue 
 ### How to Use what we have
 
 In order to take new pictures for the dataset, plug in the pi and open the documents/python/training.py file on it. That file saves images and requires a name input. There is not file to run a model.
+
+
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
+
+### Related Links
+
+<br>
+<br>
+
+Link to the [Onshape](https://cvilleschools.onshape.com/documents/c9ec1f5d0fcf0753f724fd46/w/9d831d5b9b4407d82a9e2789/e/357743bbe89e994cbf3dd1e9?renderMode=0&uiState=664637c8ad39c66d271119c3) document.
+
+<br>
+<br>
+---
+
+<br>
+<br>
+
+# [BACK TO TOP!](#table-of-contents)
+
+
+
+
 
