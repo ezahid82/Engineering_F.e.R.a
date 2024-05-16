@@ -39,6 +39,39 @@ $100
 
 <br>
 <br>
+<br>
+
+## Bill of Materials
+
+<br>
+<br>
+
+Materials |  Quantity  |
+--------- |--------- |
+1-72 Screws  |  10   |
+4-40 Screws  |  36   |
+Nuts         |  46   |
+Corner Brackets |  10  |
+Angle Brackets  |  4   |
+Pico Board      |  1   |
+Wires           |  n/a |
+Panel mount LED |  1   |
+Panel mount button | 1 |
+Dupont Connectors  | 9 |
+Acrylic Plates     | n/a |
+
+
+
+
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
 
 ## Schedule
 <br>
