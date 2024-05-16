@@ -26,6 +26,46 @@ The Purpose of Project R.a. is to build an image recognition device using machin
 <br>
 <br>
 
+## Bill of Materials
+
+<br>
+
+Materials | quantity |
+--------- | -------- |
+4-40 m-f standoffs | 4 |
+Raspberry Pi | 1 |
+Pi Camera | 1 |
+PTFT 2.8" w/ resistive touch | 1 |
+Corner Brackets | 2 |
+Angle Brackets | 2 |
+4-40 Screws | 24 |
+1-72 Screw | 4 |
+4-40 Nuts | 24 |
+1-72 Nuts | 4 |
+
+
+Parts used:
+
+4 4-40 m-f standoffs
+1 Raspberry Pi
+1 Pi camera
+1 2.2 resistive touchscreen
+2 l-brackets
+2 3-sided brackets
+25 4-40 screws
+25 4-40 nuts
+
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
+
+
 ## Schedule
 
 <br>
@@ -86,16 +126,7 @@ flowchart TD
 <br>
 <br>
 
-Parts used:
 
-4 4-40 m-f standoffs
-1 Raspberry Pi
-1 Pi camera
-1 2.2 resistive touchscreen
-2 l-brackets
-2 3-sided brackets
-25 4-40 screws
-25 4-40 nuts
 
 **Space for walls/printed parts**
 
