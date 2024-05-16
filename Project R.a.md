@@ -182,13 +182,16 @@ Use AI to allow students to identify **locations** and **parts** in the lab.
 * **Problem:** Cannot find a compatible model that works with the device.
   
    * **Solution:** Due to relative project constraints with the materials, It was decided to create a dataset instead for someone to utilize later.
+
+* **Problem:** The walls of the box are **laser cut**, but they are solid and no light can **enter**, making it difficult to see, and since the acrylic used is red, the parts look **red** under the camera.
+   * **Solution:** Changed the design of the box to have as much **hollow space** as possible to allow natural light to enter the enclosure.
  
 <br>
 <br>
 
 ## Summary
 
-Project R.a. was not finished. We ran out of time to find a compatible model and did not complete the dataset.
+Project R.a. was not finished. We ran out of time to find a compatible model ue to storage issues and did not complete the dataset. The photos gathered are saved to the device but the quantity of each part picture needs to increase (from 10 to 100) when enough storage is present to run a model. The project is clear with instructions (below) for future engineers to pick_up and iterate upon when deciding on a project to complete.
 
 ### How to Use what we have
 
