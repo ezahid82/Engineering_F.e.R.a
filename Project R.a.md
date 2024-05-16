@@ -128,3 +128,14 @@ Parts used:
   
    * **Solution:** Due to relative project constraints with the materials, It was decided to create a dataset instead for someone to utilize later.
  
+<br>
+<br>
+
+## Summary
+
+Project R.a. was not finished. We ran out of time to find a compatible model and did not complete the dataset.
+
+### How to Use what we have
+
+In order to take new pictures for the dataset, plug in the pi and open the documents/python/training.py file on it. That file saves images and requires a name input. There is not file to run a model.
+
