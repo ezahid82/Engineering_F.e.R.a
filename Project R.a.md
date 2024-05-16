@@ -44,17 +44,6 @@ Angle Brackets | 2 |
 1-72 Nuts | 4 |
 
 
-Parts used:
-
-4 4-40 m-f standoffs
-1 Raspberry Pi
-1 Pi camera
-1 2.2 resistive touchscreen
-2 l-brackets
-2 3-sided brackets
-25 4-40 screws
-25 4-40 nuts
-
 <br>
 <br>
 <br>
