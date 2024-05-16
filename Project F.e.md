@@ -646,6 +646,9 @@ CAD-designed brackets for the Dupont connectors
 <details>
 <summary>Final Assembly</summary>
 
+<br>
+<br>
+
 * Assembly of the **Test Box**
 
 <br>
@@ -658,7 +661,19 @@ CAD-designed brackets for the Dupont connectors
 
 <img src="Images/F.e.R.a. - Assembly (Topographic).jpg" alt="the Test Box from an angle" width="550" height="550">
 
-  
+<br>
+<br>
+
+* Completed build and functioning.
+
+<img src="Images/F.e. Final Assembly 4.jpg" alt="test box plugged into the wall outlet" width="550" height="550">
+
+<img src="Images/F.e. Final Assembly 2.jpg" alt="test box functioning w/ parts" width="550" height="550">
+
+<br>
+<br>
+<br>
+
 </details>
 
 
