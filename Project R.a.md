@@ -15,6 +15,18 @@ The Purpose of Project R.a. is to build an image recognition device using machin
 ## Table of Contents
 
 <br>
+
+* [Project R.a.](#ai-recognition)
+
+---
+
+<br>
+<br>
+<br>
+
+## Schedule
+
+<br>
 <br>
 
 
@@ -88,13 +100,34 @@ Parts used:
 
 <br>
 <br>
+<br>
 
 ---
 
 <br>
 <br>
 <br>
- 
+
+## AI-Recognition
+
+<br>
+<br>
+<br>
+
+### Description
+
+Use AI to allow students to identify **locations** and **parts** in the lab.
+
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
+
 ### Problems and solution/project ideas
 
 <br>
